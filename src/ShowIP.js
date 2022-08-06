@@ -42,7 +42,6 @@ const theme = createTheme({
         }
     }
 })
-
 export default function ShowIP() {
     const [data, setData] = useState(false)
     const [errMessage, setErrMessage] = useState("Data not responding😒")

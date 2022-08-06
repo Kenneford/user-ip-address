@@ -10,7 +10,6 @@
 //     const ipData = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${process.env.REACT_APP_API_KEY}`
 // // 
 // //     
-
 //     useEffect(()=>{
 //         const userIP = async () =>{
 //             try{

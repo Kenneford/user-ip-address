@@ -24,7 +24,7 @@ function App() {
         </div>
         </header>
       </Container>
-      {/* <ShowIP /> */}
+    
     </div>
   );
 }
