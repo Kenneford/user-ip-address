@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ShowIP from './ShowIP';
 
 function App() {
   console.log(process.env.REACT_APP_API_KEY)
@@ -19,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <ShowIP />
       </header>
     </div>
   );

@@ -40,13 +40,13 @@ const theme = createTheme({
     }
 })
 
-export default function ShowIP() {
+export default function ShowIP({data}) {
   return (
     <ThemeProvider theme={theme}>
             <Paper elevation={3} className="paper" sx={{marginY: 5}}>
                 {/* <Link to="/"><button className='goBack'>Go back</button></Link> */}
                 <h1>What's My IP?</h1>
-                <img src=''
+                <img src=""
                 className='bg-image'/>
                 <Paper elevation={6} className='floatPaper'>
                     <img src=''
