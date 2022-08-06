@@ -7,12 +7,12 @@ import ShowIP from './ShowIP';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/user-ip' element={<ShowIP />} />
-      </Routes>
+  <Router>
+    <React.StrictMode>
+        <Routes>
+            <Route path='/' element={<App />} />
+            <Route path='/user-ip' element={<ShowIP />} />
+        </Routes>
+    </React.StrictMode>
     </Router>
-  </React.StrictMode>
 );
