@@ -22,31 +22,45 @@
     font-weight: 800;
     text-align: center;
 }
-.bg-image{
+.map{
     width: 100%;
-    height: 80vh;
+    /* height: 80vh; */
 }
 .floatPaper{
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    width: 30%;
-    height: 50vh;
+    margin-top: -10px;
+    width: 100%;
+    height: 40vh;
 }
 .float-image{
     width: 100%;
-    height: 35vh;
+    height: 25vh;
+    margin-top: 30px;
+    margin-left: 0px;
 }
 .myBox{
     text-align: center;
 }
+.flagFlex{
+    display: flex;
+}
+.rightFlex{
+    width: 500px;
+    margin-left: -50px;
+}
 .boldFont p{
     font-weight: 700;
-    margin-top: 5px;
+    margin-top: 70px;
 }
 .pBold{
     font-weight: 400;
     font-size: .9em;
+}
+.location{
+    margin-top: 5px;
+}
+.latLng{
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 .boxLine{
     border-top: 1px solid #e5e5e5;
