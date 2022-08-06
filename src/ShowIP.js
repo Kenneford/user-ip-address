@@ -62,6 +62,13 @@ export default function ShowIP() {
         }
         userIP()
     }, [])
+    
+        let today = new Date(),
+        currentTime = today.toLocaleTimeString();
+
+        let todayDate = new Date(),
+        date = todayDate.getFullYear() + '-' + (todayDate.getMonth() + 1) + '-' + todayDate.getDate();
+     
     if(!data){
         return <div>Loading...</div>
     }
@@ -76,8 +83,7 @@ export default function ShowIP() {
                 <Paper elevation={6} className='floatPaper'>
                     <Box className='myBox'>
                         <div className='flagFlex'>
-                            <img src={logo}
-                            className='float-image'/>
+                            <img src={logo} className='float-image'/>
                             <div className='rightFlex'>
                                 <Box>
                                     <Box>
@@ -97,6 +103,9 @@ export default function ShowIP() {
                                         <Typography variant='body2' marginLeft={0.5}>
                                             Latitude: {data.location.lat}
                                         </Typography>
+                                        <Typography variant='body2' marginLeft={0.5}>
+                                            {currentTime}
+                                        </Typography>
                                     </div>
                                 </Box>
                             </div>
@@ -104,7 +113,7 @@ export default function ShowIP() {
                         <Box className='boxLine'>
                             <CalendarMonth  sx={{width: 17}}/>
                             <Typography variant='body2' marginLeft={0.5}>
-                                Dated on the 6.08.2022
+                                {date}
                             </Typography>
                         </Box>
                         <Box className='flexBox'>
