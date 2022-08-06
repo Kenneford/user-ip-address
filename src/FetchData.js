@@ -30,8 +30,7 @@ export default function FetchData() {
   return (
     <div>
         <div>{data.ip}</div>
-        <MyMap lat={data.location.lat} lng={data.location.lng}/>
-        <ShowIP data={data}/>
+        <ShowIP data={data} map={MyMap}/>
     </div>
   )
 }
