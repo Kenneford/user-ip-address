@@ -20,7 +20,13 @@ function App() {
         >
           Learn React
         </a>
-        <ShowIP />
+      <h1 className>IP Address Tutorial</h1>
+      <div className="ip">
+        <p>Welcome to Find My IP Address</p>
+        <p>Kindly click here to find your IP Address</p>
+        <button className="click">Find My IP's</button>
+
+      </div>
       </header>
     </div>
   );
