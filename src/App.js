@@ -16,12 +16,12 @@ function App() {
         height: "100vh",
         }}>
         <header className="App-header">
-        <h1 className>IP Address Tutorial</h1>
-        <div className="ip">
-          <p>Welcome to Find My IP Address</p>
-          <p>Kindly click here to find your IP Address</p>
-          <Link to="/user-ip"><button className="click">Find My IP's</button></Link>
-        </div>
+            <h1 className>IP Address Tutorial</h1>
+            <div className="ip">
+                <p>Welcome to Find My IP Address</p>
+                <p>Kindly click here to find your IP Address</p>
+                <Link to="/user-ip"><button className="click">Find My IP's</button></Link>
+            </div>
         </header>
       </Container>
     
