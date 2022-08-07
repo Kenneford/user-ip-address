@@ -10,8 +10,8 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/user-ip' element={<ShowIP />} />
+        <Route path='/' element={<App />} exact />
+        <Route path='/user-ip-address' element={<ShowIP />} />
       </Routes>
     </Router>
   </React.StrictMode>

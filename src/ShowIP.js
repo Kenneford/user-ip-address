@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import {AccessTime, CalendarMonth} from "@mui/icons-material";
 import {createTheme, ThemeProvider} from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { MyMap } from './MyMap';
 import logo from './germany-flag.svg';
@@ -73,58 +73,61 @@ export default function ShowIP() {
         return <div>Loading...</div>
     }
   return (
-        <ThemeProvider theme={theme}>
-            <Paper elevation={3} className="paper" sx={{marginY: 2}}>
-                <Link to="/"><button className='goBack'>Go back</button></Link>
-                <h1>What's My IP?</h1>
-                <div className='map'>
-                    <MyMap lat={data.location.lat} lng={data.location.lng}/>
-                </div>
-                <Paper elevation={6} className='floatPaper'>
-                    <Box className='myBox'>
-                        <div className='flagFlex'>
-                            <img src={logo} className='float-image'/>
-                            <div className='rightFlex'>
-                                <Box>
+        <div>
+            <ThemeProvider theme={theme}>
+                <Paper elevation={3} className="paper" sx={{marginY: 2}}>
+                    <Link to="/"><button className='goBack'>Go back</button></Link>
+                    <h1>What's My IP?</h1>
+                    <div className='map'>
+                        <MyMap lat={data.location.lat} lng={data.location.lng}/>
+                    </div>
+                    <Paper elevation={6} className='floatPaper'>
+                        <Box className='myBox'>
+                            <div className='flagFlex'>
+                                <img src={logo} className='float-image'/>
+                                <div className='rightFlex'>
                                     <Box>
-                                        <Typography variant='body1' className='boldFont'>
-                                            <p>Your IP adress is {data.ip}</p>
-                                        </Typography>
+                                        <Box>
+                                            <Typography variant='body1' className='boldFont'>
+                                                <p>Your IP adress is {data.ip}</p>
+                                            </Typography>
+                                        </Box>
+                                        <div className='location'>
+                                            <Typography variant='body3'>
+                                                <p className='pBold'>You are currently located in {data.location.region}, {data.location.country}</p>
+                                            </Typography>
+                                        </div>
+                                        <div className='latLng'>
+                                            <Typography variant='body2' marginLeft={0.5}>
+                                                Longitude: {data.location.lng}
+                                            </Typography>
+                                            <Typography variant='body2' marginLeft={0.5}>
+                                                Latitude: {data.location.lat}
+                                            </Typography>
+                                            <Typography variant='body2' marginLeft={0.5}>
+                                                {currentTime}
+                                            </Typography>
+                                        </div>
                                     </Box>
-                                    <div className='location'>
-                                        <Typography variant='body3'>
-                                            <p className='pBold'>You are currently located in {data.location.region}, {data.location.country}</p>
-                                        </Typography>
-                                    </div>
-                                    <div className='latLng'>
-                                        <Typography variant='body2' marginLeft={0.5}>
-                                            Longitude: {data.location.lng}
-                                        </Typography>
-                                        <Typography variant='body2' marginLeft={0.5}>
-                                            Latitude: {data.location.lat}
-                                        </Typography>
-                                        <Typography variant='body2' marginLeft={0.5}>
-                                            {currentTime}
-                                        </Typography>
-                                    </div>
-                                </Box>
+                                </div>
                             </div>
-                        </div>
-                        <Box className='boxLine'>
-                            <CalendarMonth  sx={{width: 17}}/>
-                            <Typography variant='body2' marginLeft={0.5}>
-                                {date}
-                            </Typography>
+                            <Box className='boxLine'>
+                                <CalendarMonth  sx={{width: 17}}/>
+                                <Typography variant='body2' marginLeft={0.5}>
+                                    {date}
+                                </Typography>
+                            </Box>
+                            <Box className='flexBox'>
+                                <AccessTime  sx={{width: 17}}/>
+                                <Typography marginLeft={0.5} variant='body2'>
+                                    Your local time is {data.location.timezone}
+                                </Typography>
+                            </Box>
                         </Box>
-                        <Box className='flexBox'>
-                            <AccessTime  sx={{width: 17}}/>
-                            <Typography marginLeft={0.5} variant='body2'>
-                                Your local time is {data.location.timezone}
-                            </Typography>
-                        </Box>
-                    </Box>
+                    </Paper>
                 </Paper>
-            </Paper>
-        </ThemeProvider>
+            </ThemeProvider>
+            {/* <Outlet /> */}
+        </div>
   )
 }
