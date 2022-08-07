@@ -11,7 +11,7 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<App />} exact />
-        <Route path='/user-ip-address' element={<ShowIP />} />
+        <Route path='/user-ip' element={<ShowIP />} />
       </Routes>
     </Router>
   </React.StrictMode>
