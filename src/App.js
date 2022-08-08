@@ -7,7 +7,6 @@ import ShowIP from './ShowIP';
 function App() {
   console.log(process.env.REACT_APP_API_KEY)
   return (
-    <div>
         <Container sx={{
             // marginY: 5,
             textAlign: 'center',
@@ -23,7 +22,6 @@ function App() {
                 </div>
             </header>
         </Container>
-    </div>
   );
 }
 

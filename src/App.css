@@ -41,3 +41,35 @@
   background: #fff;
   color: cornflowerblue;
 }
+
+.ooops{
+  /* background: #fff; */
+  text-align: center;
+  background: #e6e4e4;
+  height: 100vh;
+
+}
+.empty-page-msg{
+  padding: 30px 0;
+}
+.ooops-btn{
+  width: 120px;
+  /* position: relative;
+  margin-left: 900px; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.2em;
+  background: #fe6f1c;
+}
+.ooops-btn:hover{
+  background: #f88d50;
+  cursor: pointer;
+}
+.ooops-img img{
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}

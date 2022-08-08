@@ -53,11 +53,11 @@ export default function ShowIP() {
             try{
                 const response = await fetch(ipData)
                 const userIPData = await response.json()
-                console.log(userIPData)
+                // console.log(userIPData)
                 setData(userIPData)
             } catch (err){
-                console.log(err)
-                setErrMessage(err.message)
+                // console.log(err)
+                setErrMessage(errMessage)
             }
         }
         userIP()
@@ -70,7 +70,7 @@ export default function ShowIP() {
         date = todayDate.getFullYear() + '-' + (todayDate.getMonth() + 1) + '-' + todayDate.getDate();
      
     if(!data){
-        return <div>Loading...</div>
+        return <div className='loading'>Loading...</div>
     }
   return (
         <div>
